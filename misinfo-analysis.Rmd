@@ -40,9 +40,7 @@ lul.d %>%
   ggtitle('Gender of respondents')
 ```
 
-## 
-
-
+## Use of Facebook as a source of knowledge about coronavirus
 ```{r}
 lul.d %>%
   ggplot(aes(x = know_facebook)) +
