@@ -1,0 +1,35 @@
+---
+title: "Coronavirus misinformation beliefs"
+author: "Daniel Allington"
+date: "3/9/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(scipen = 999)
+
+library(dplyr)               # for tidy data manipulation
+library(readr)               # for loading the data into memory
+library(ggplot2)             # for tidy data visualisation
+
+lul.d <- read_csv(
+  '../data/life-under-lockdown-wave2-extract.csv',
+  col_types = cols(
+    col_number(),            # age is a numeric variable,
+    col_factor(),            # gender is a categorical variable,
+    col_factor(              # know_facebook is a categorical variable
+      levels = c(            
+        'Nothing at all',    # the possible values of 
+        'Not very much',     # know_facebook are in 
+        'A fair amount',     # exactly this order
+        'A great deal'       # (important for an ordinal variable)
+        ), 
+      ordered = TRUE),       # know_facebook is in fact ordinal
+    col_number()))           # beliefs is a numeric variable
+
+```
+
+
+
+
