@@ -50,3 +50,18 @@ lul.d %>%
   ggtitle('Please tell us how much of what you know about coronavirus,\nif anything, comes from Facebook')
 ```
 
+# Visualise numeric variables
+## Age
+```{r}
+lul.d %>%
+  ggplot(aes(x = age)) +
+  geom_histogram(binwidth = 5)
+```
+
+## Misinformation beliefs
+```{r}
+lul.d %>%
+  ggplot(aes(x = beliefs)) +
+  geom_histogram(binwidth = 1)
+```
+
