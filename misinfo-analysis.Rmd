@@ -95,3 +95,21 @@ lul.d %>%
   summarise(n = n(), Mdn = median(beliefs), M = mean(beliefs), SD = sd(beliefs))
 ```
 
+Observations: women _in the sample_ have fewer misinformation beliefs about coronavirus than men; there are too few people who identify their gender in another way to include in the analysis
+
+Is the difference between women and men statistically significant?
+
+```{r}
+lul.d %>%
+  filter(
+    gender %in% c(
+      'Male', 'Female')         # Remove non-binary
+  ) %>%
+  t.test(
+    formula = beliefs ~ gender, # Number of beliefs by gender 
+    var.equal = FALSE,          # Use unequal variances t test
+    data = .                    # Work with the dataset above
+  )
+```
+
+
