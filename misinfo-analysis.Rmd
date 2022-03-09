@@ -55,13 +55,16 @@ lul.d %>%
 ```{r}
 lul.d %>%
   ggplot(aes(x = age)) +
-  geom_histogram(binwidth = 5)
+  geom_histogram(binwidth = 5) +
+  ggtitle('Age of respondents')
 ```
 
 ## Misinformation beliefs
 ```{r}
 lul.d %>%
   ggplot(aes(x = beliefs)) +
-  geom_histogram(binwidth = 1)
+  geom_histogram(binwidth = 1) +
+  ggtitle('Number of misinformation beliefs about coronavirus')
 ```
+
 
