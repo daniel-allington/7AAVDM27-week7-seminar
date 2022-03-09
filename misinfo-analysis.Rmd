@@ -112,4 +112,5 @@ lul.d %>%
   )
 ```
 
+More misinformation beliefs were held by men (M = 0.73, SD = 1.13) than by women (M = 0.61, SD = 1.05), but the difference is not statistically significant, t(494.31)=1.201, p = 0.23.
 
