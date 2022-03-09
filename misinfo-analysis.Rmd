@@ -87,3 +87,11 @@ lul.d %>%
   summarise(n = n(), Mdn = median(beliefs), M = mean(beliefs), SD = sd(beliefs))
 ```
 
+# Analysis
+## Misinformation beliefs by gender
+```{r}
+lul.d %>%
+  group_by(gender) %>%
+  summarise(n = n(), Mdn = median(beliefs), M = mean(beliefs), SD = sd(beliefs))
+```
+
