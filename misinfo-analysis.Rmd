@@ -65,4 +65,16 @@ lul.d %>%
   ggtitle('Number of misinformation beliefs about coronavirus')
 ```
 
+# Distribution of numeric variables
+## Age
+```{r}
+lul.d %>%
+  summarise(n = n(), Mdn = median(age), M = mean(age), SD = sd(age))
+```
+
+## Misinformation beliefs
+```{r}
+lul.d %>%
+  summarise(n = n(), Mdn = median(beliefs), M = mean(beliefs), SD = sd(beliefs))
+```
 
