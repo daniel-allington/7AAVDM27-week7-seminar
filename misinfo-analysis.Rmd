@@ -31,15 +31,22 @@ lul.d <- read_csv(
 ```
 
 # Visualise categorical variables
+
+## Gender
 ```{r}
 lul.d %>%
   ggplot(aes(x = gender)) +
-  geom_bar()
+  geom_bar() +
+  ggtitle('Gender of respondents')
 ```
+
+## 
+
 
 ```{r}
 lul.d %>%
   ggplot(aes(x = know_facebook)) +
-  geom_bar()
+  geom_bar() +
+  ggtitle('Please tell us how much of what you know about coronavirus,\nif anything, comes from Facebook')
 ```
 
