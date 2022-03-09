@@ -2,7 +2,9 @@
 title: "Coronavirus misinformation beliefs"
 author: "Daniel Allington"
 date: "3/9/2022"
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -31,7 +33,6 @@ lul.d <- read_csv(
 ```
 
 # Visualise categorical variables
-
 ## Gender
 ```{r}
 lul.d %>%
@@ -64,6 +65,14 @@ lul.d %>%
   geom_histogram(binwidth = 1) +
   ggtitle('Number of misinformation beliefs about coronavirus')
 ```
+
+How many of the following does each respondent consider 'true' (answer options: 'true', 'false', 'don't know'):
+
+* Coronavirus was probably created in a laboratory					
+* The symptoms that most people blame on coronavirus appear to be linked to 5G network radiation	
+* There is no hard evidence that coronavirus really exists				
+* The number of people reported as dying from coronavirus is being deliberately exaggerated by the authorities
+* The current pandemic is part of a global effort to force everyone to be vaccinated whether they want to or not
 
 # Distribution of numeric variables
 ## Age
