@@ -30,6 +30,16 @@ lul.d <- read_csv(
 
 ```
 
+# Visualise categorical variables
+```{r}
+lul.d %>%
+  ggplot(aes(x = gender)) +
+  geom_bar()
+```
 
-
+```{r}
+lul.d %>%
+  ggplot(aes(x = know_facebook)) +
+  geom_bar()
+```
 
